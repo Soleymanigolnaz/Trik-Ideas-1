@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;padding: 0;box-sizing: border-box;
+    }
+body{
+    height: 100vh;
+    background-color: rgb(45, 57, 122);
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.text-row{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap: 5;
+}
+.text-row h1{
+    font-size: 7rem;
+}
+.sun{
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: pulse 3s  linear infinite;
+}
+.path-first{
+    position: relative;
+    height: 110px;
+    width: 110px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 5s linear infinite;
+
+}
+.path-second{
+    position: relative;
+    width: 210px;
+    height: 210px;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 5s linear infinite;
+}
+.planet-first{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -14px;
+    background-color: rgb(224, 35, 177);
+}
+.planet-second{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -14px;
+    background-color: rgb(91, 235, 146);
+
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes pluse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+</style>
+<body>
+    <div class="text-row">
+        <h1>G</h1>
+        <div class="path-second">
+            <div class="planet-second"></div>
+            <div class="path-first">
+                <div class="planet-first"></div>
+                <div class="sun"></div>
+            </div>
+        </div>
+        <h1>LNAZ</h1>
+    </div>
+</body>
+</html>
